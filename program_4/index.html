@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,intial-scale=1.0">
+    <title>Tailwind UI Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <!--navbar-->
+    <nav class="bg-indigo-600 text-whitep-4 shadow-ig">
+        <div class="cotainer mx-auto flex justify-between items-center p-4">
+            <div class="text-lg font-bold">Tailwind UI Demo</div>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                <li><a href="#" class="hover:text-gray-300">About</a></li>
+                <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+            </ul>
+    </nav>
+    <!--Card-->
+    <div class="container mx-auto p-6">
+        <h2 class="text-xl font-bold mb-4">Welcome to Tailwind UI Demo</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols gap-6">
+            <div class="bg-white p-6 shadow-md">
+                <h3 class="text-lg font-bold mb-2">Basic Plan</h3>
+                <p class="text-gray-600">Perfect for individuals getting started.</p>
+                <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Sign Up</button>
+                <p class="mt-2 text-sm text-gray-500">$9.99/month</p>
+            </div>
+            <div class="bg-white p-6 shadow-md">
+                <h3 class="text-lg font-bold mb-2">Premium Plan</h3>
+                <p class="text-gray-600">Ideal for growing businesses.</p>
+                <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Sign Up</button>
+                <p class="mt-2 text-sm text-gray-500">$19.99/month</p>
+            </div>
+            <div class="bg-white p-6 shadow-md">
+                <h3 class="text-lg font-bold mb-2">Enterprise Plan</h3>
+                <p class="text-gray-600">Perfect for large organizations with complex needs.</p>
+                <button class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Sign Up</button>
+                <p class="mt-2 text-sm text-gray-500">$29.99/month</p> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>

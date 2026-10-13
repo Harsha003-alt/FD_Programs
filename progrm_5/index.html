@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f2f5;
+            padding: 40px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        .radio-group input,
+        .checkbox-group input {
+            width: auto;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .success {
+            color: #28a745;
+            text-align: center;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Create Account</h2>
+        <form id="regForm" novalidate>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" pattern="[A-Za-z ]{3,50}" required>
+                <div class="error" id="nameError">Name must be 3-50 letters only</div>
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+                <div class="error" id="emailError">Enter a valid email address</div>
+            </div>
+            <div class="form-group">
+                <label>Password (min 6 characters)</label>
+                <input type="password" id="password" minlength="6" required>
+                <div class="error" id="passError">Password must be at least 6 characters</div>
+            </div>
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+                <div class="error" id="genderError">Select your gender</div>
+            </div>
+            <div class="form-group">
+                <label>Country</label>
+                <select id="country" required>
+                    <option value="">-- Select --</option>
+                    <option value="IN">India</option>
+                    <option value="US">USA</option>
+                    <option value="UK">UK</option>
+                </select>
+                <div class="error" id="countryError">Select a country</div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="terms" required> I agree to the Terms & Conditions</label>
+                </div>
+                <div class="error" id="termsError">You must agree to terms</div>
+            </div>
+            <button type="submit">Register</button>
+            <div class="success" id="successMsg">Registration successful!</div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
