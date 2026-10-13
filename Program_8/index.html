@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Data Fetch</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        table { margin: 20px auto; border-collapse: collapse; width: 60%; }
+        th, td { padding: 10px; border: 1px solid #ccc; }
+        th { background: #007bff; color: white; }
+        button { padding: 10px 20px; background: #28a745; color: white; border: none; cursor: pointer; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+    <h2>User List</h2>
+    <button onclick="fetchUsers()">Load Users</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody id="data"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>

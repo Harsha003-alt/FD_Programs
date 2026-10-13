@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Task Manager</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #eee;
+            text-align: center
+        }
+
+        .container {
+            width: 350px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px
+        }
+
+        input,
+        button {
+            padding: 8px;
+            margin: 5px
+        }
+
+        .task {
+            margin: 10px;
+            background: #eee;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Task Manager</h2>
+        <input id="task" placeholder="Enter task">
+        <button onclick="add()">Add</button>
+        <div id="list"></div>
+        <p id="count">0 tasks</p>
+    </div>
+
+    <script>
+        let tasks = [];
+        function add() {
+            let t = document.getElementById("task");
+            if (!t.value.trim()) return;
+            tasks.push(t.value.trim());
+            t.value = "";
+            show();
+        }
+        function del(i) {
+            tasks.splice(i, 1);
+            show();
+        }
+        function show() {
+            list.innerHTML = tasks.map((t, i) =>
+                `<div class="task">${t}
+ <button onclick="del(${i})">Delete</button></div>`
+            ).join("");
+            count.innerText = tasks.length + " tasks";
+        }
+    </script>
+</body>
+
+</html>

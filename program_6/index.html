@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            background: #eee
+        }
+
+        .calc {
+            width: 250px;
+            margin: 100px auto;
+            padding: 20px;
+            background: #333
+        }
+
+        input {
+            width: 95%;
+            height: 40px;
+            font-size: 25px;
+            text-align: right
+        }
+
+        button {
+            width: 50px;
+            height: 45px;
+            margin: 3px;
+            font-size: 18px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="calc">
+        <input id="display" value="0" readonly><br>
+
+        <button onclick="clr()">AC</button>
+        <button onclick="add('/')">÷</button>
+        <button onclick="add('*')">×</button>
+        <button onclick="add('-')">−</button><br>
+
+        <button onclick="add('7')">7</button>
+        <button onclick="add('8')">8</button>
+        <button onclick="add('9')">9</button>
+        <button onclick="add('+')">+</button><br>
+
+        <button onclick="add('4')">4</button>
+        <button onclick="add('5')">5</button>
+        <button onclick="add('6')">6</button>
+        <button onclick="add('1')">1</button><br>
+
+        <button onclick="add('2')">2</button>
+        <button onclick="add('3')">3</button>
+        <button onclick="add('0')">0</button>
+        <button onclick="cal()">=</button><br>
+
+        <button onclick="add('.')">.</button>
+    </div>
+
+    <script>
+        let d = document.getElementById("display");
+
+        function add(x) {
+            if (d.value == "0" || d.value == "Error") d.value = "";
+            d.value += x;
+        }
+        function clr() { d.value = "0"; }
+        function cal() {
+            try { d.value = eval(d.value); }
+            catch { d.value = "Error"; }
+        }
+    </script>
+</body>
+
+</html>
