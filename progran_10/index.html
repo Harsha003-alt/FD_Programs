@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>React Dashboar || Program 10</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #eee
+        }
+
+        nav {
+            background: #222;
+            color: white;
+            padding: 15px
+        }
+
+        .container {
+            display: flex
+        }
+
+        aside {
+            background: #16213e;
+            color: white;
+            padding: 20px;
+            width: 150px
+        }
+
+        main {
+            padding: 20px;
+            flex: 1
+        }
+
+        .cards {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            flex: 1;
+            min-width: 100px
+        }
+
+        table {
+            background: white;
+            width: 100%;
+            margin-top: 20px
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        function Dashboard() {
+            const [users, setUsers] = React.useState([]);
+
+            React.useEffect(() => {
+                fetch("https://jsonplaceholder.typicode.com/users")
+                    .then(r => r.json()).then(setUsers);
+            }, []);
+
+            return <>
+                <nav><h2>Dashboard - Welcome Admin</h2></nav>
+                <div className="container">
+                    <aside>
+                        <h3>Menu</h3>
+                        <p>Home</p><p>Analytics</p>
+                        <p>Users</p><p>Settings</p>
+                    </aside>
+                    <main>
+                        <div className="cards">
+                            {["Users: " + users.length, "Revenue: $1500",
+                                "Orders: 30", "Growth: +12%"].map(x =>
+                                    <div className="card">{x}</div>)}
+                        </div>
+                        <h3>Recent Users</h3>
+                        <table>
+                            <thead><tr><th>Name</th><th>Email</th><th>City</th></tr></thead>
+                            <tbody>{users.slice(0, 5).map(u =>
+                                <tr key={u.id}>
+                                    <td>{u.name}</td><td>{u.email}</td>
+                                    <td>{u.address.city}</td>
+                                </tr>)}</tbody>
+                        </table>
+                    </main>
+                </div>
+            </>;
+        }
+        ReactDOM.createRoot(document.getElementById("root"))
+            .render(<Dashboard />);
+    </script>
+</body>
+
+</html>
