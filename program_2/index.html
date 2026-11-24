@@ -1,52 +1,37 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout Demo || Program 2</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; display: flex; min-height: 100vh; }
+    .sidebar { width: 200px; background-color: #333; color: white; padding: 20px; }
+    .sidebar h2 { margin-top: 0; }
+    .sidebar a { display: block; color: white; text-decoration: none; padding: 10px 0; }
+    .sidebar a:hover { background-color: #575757; padding-left: 5px; }
+    .main-container { flex: 1; display: flex; flex-direction: column; }
+    .content { flex: 1; padding: 30px; }
+    footer { background-color: #eee; text-align: center; padding: 10px; }
+  </style>
+</head>
+<body>
 
-  <body>
-    <header>
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+  <div class="main-container">
+    <div class="content">
       <h1>My Website</h1>
-
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Service</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-
-    <div class="container">
-      <aside class="sidebar">
-        <ul>
-          <li>Dashboard</li>
-          <li>Profile</li>
-          <li>Settings</li>
-          <li>Logout</li>
-        </ul>
-      </aside>
-
-      <main class="content">
-        <h2>Welcome</h2>
-
-        <p>
-          This layout uses CSS Grid for the overall page structure and Flexbox
-          for navigation and card alignment.
-        </p>
-
-        <div class="cards">
-          <div class="card">Card 1</div>
-          <div class="card">Card 2</div>
-          <div class="card">Card 3</div>
-        </div>
-      </main>
+      <p>Welcome to the content area</p>
     </div>
-
     <footer>
-      <p>&copy; 2026 Flexbox &amp; Grid Demo</p>
+      <p>&copy; 2026 My Website</p>
     </footer>
-  </body>
+  </div>
+
+</body>
 </html>
