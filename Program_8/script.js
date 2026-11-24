@@ -1,19 +1,10 @@
 async function fetchUsers() {
-    try {
-        let res = await fetch("https://jsonplaceholder.typicode.com/users");
-        let users = await res.json();
-
-        let rows = "";
-        users.forEach(u => {
-            rows += `<tr>
-                <td>${u.id}</td>
-                <td>${u.name}</td>
-                <td>${u.email}</td>
-            </tr>`;
-        });
-
-        document.getElementById("data").innerHTML = rows;
-    } catch (err) {
-        alert("Failed to load data.");
-    }
+  try {
+    const users = await (await fetch("https://jsonplaceholder.typicode.com/users")).json();
+    document.getElementById("data").innerHTML = users
+      .map(u => `<tr><td>${u.id}</td><td>${u.name}</td><td>${u.email}</td></tr>`)
+      .join("");
+  } catch {
+    alert("Failed to load data.");
+  }
 }

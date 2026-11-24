@@ -1,54 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MyApp - Pricing</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 0; text-align: center; background-color: #f5f7fa; }
-    header { background-color: #1e293b; color: white; padding: 20px; }
-    nav a { color: #cbd5e1; margin: 0 12px; text-decoration: none; }
-    .plans { display: flex; justify-content: center; gap: 20px; padding: 40px 20px; flex-wrap: wrap; }
-    .card { background: white; width: 240px; padding: 25px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    .price { font-size: 28px; font-weight: bold; margin: 15px 0; color: #0f172a; }
-    button { background-color: #2563eb; color: white; border: none; padding: 10px 18px; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #1d4ed8; }
-  </style>
+<meta charset="UTF-8">
+<title>MyApp - Pricing</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;text-align:center;background:#f5f7fa}
+header{background:#1e293b;color:#fff;padding:20px}
+nav a{color:#cbd5e1;margin:0 12px;text-decoration:none}
+.plans{display:flex;justify-content:center;flex-wrap:wrap;gap:20px;padding:40px 20px}
+.card{background:#fff;width:240px;padding:25px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.price{font-size:28px;font-weight:bold;margin:15px 0;color:#0f172a}
+button{background:#2563eb;color:#fff;border:0;padding:10px 18px;border-radius:5px;cursor:pointer}
+button:hover{background:#1d4ed8}
+</style>
 </head>
 <body>
-
-  <header>
-    <h2>MyApp</h2>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
-
-  <h1>Our Products</h1>
-
-  <div class="plans">
-    <div class="card">
-      <h3>Basic Plan</h3>
-      <p>Perfect for beginners.</p>
-      <div class="price">$9/month</div>
-      <button onclick="alert('Selected Basic Plan')">Choose Plan</button>
-    </div>
-
-    <div class="card">
-      <h3>Pro Plan</h3>
-      <p>Advanced features for professionals.</p>
-      <div class="price">$29/month</div>
-      <button onclick="alert('Selected Pro Plan')">Choose Plan</button>
-    </div>
-
-    <div class="card">
-      <h3>Enterprise</h3>
-      <p>Custom solutions for teams.</p>
-      <div class="price">$99/month</div>
-      <button onclick="alert('Selected Enterprise Plan')">Choose Plan</button>
-    </div>
-  </div>
-
+<header><h2>MyApp</h2><nav><a href="#">Home</a><a href="#">About</a><a href="#">Contact</a></nav></header>
+<h1>Our Products</h1>
+<div class="plans">
+<div class="card"><h3>Basic Plan</h3><p>Perfect for beginners.</p><div class="price">$9/month</div><button onclick="alert('Selected Basic Plan')">Choose Plan</button></div>
+<div class="card"><h3>Pro Plan</h3><p>Advanced features for professionals.</p><div class="price">$29/month</div><button onclick="alert('Selected Pro Plan')">Choose Plan</button></div>
+<div class="card"><h3>Enterprise</h3><p>Custom solutions for teams.</p><div class="price">$99/month</div><button onclick="alert('Selected Enterprise Plan')">Choose Plan</button></div>
+</div>
 </body>
 </html>

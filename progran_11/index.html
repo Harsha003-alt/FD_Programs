@@ -1,81 +1,25 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Responsive Layout || Program 11</title>
-    <style>
-        * {
-            box-sizing: border-box
-        }
-
-        body {
-            font-family: Arial;
-            margin: 0
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            padding: 20px
-        }
-
-        .sidebar {
-            width: 250px;
-            background: #eee;
-            padding: 20px
-        }
-
-        .content {
-            flex: 1;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px
-        }
-
-        .card {
-            background: #007bff;
-            color: white;
-            width: 200px;
-            height: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px
-        }
-
-        button {
-            padding: 12px 24px;
-            background: green;
-            color: white;
-            border: 0;
-            border-radius: 5px
-        }
-
-        @media(max-width:600px) {
-
-            .sidebar,
-            .content {
-                width: 100%
-            }
-
-            .card {
-                width: 100%
-            }
-        }
-    </style>
+<title>Responsive Layout || Program 11</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:Arial;margin:0}
+.container{display:flex;flex-wrap:wrap;gap:20px;padding:20px}
+.sidebar{width:250px;background:#eee;padding:20px}
+.content{flex:1;display:flex;flex-wrap:wrap;gap:15px}
+.card{background:#007bff;color:#fff;width:200px;height:100px;display:flex;align-items:center;justify-content:center;border-radius:8px}
+button{padding:12px 24px;background:green;color:#fff;border:0;border-radius:5px}
+@media(max-width:600px){.sidebar,.content,.card{width:100%}}
+</style>
 </head>
-
 <body>
-    <div class="container">
-        <div class="sidebar">Sidebar</div>
-        <div class="content">
-            <div class="card">Card 1</div>
-            <div class="card">Card 2</div>
-            <div class="card">Card 3</div>
-            <button>Submit</button>
-        </div>
-    </div>
+<div class="container">
+<div class="sidebar">Sidebar</div>
+<div class="content">
+<div class="card">Card 1</div><div class="card">Card 2</div><div class="card">Card 3</div>
+<button>Submit</button>
+</div>
+</div>
 </body>
-
 </html>
